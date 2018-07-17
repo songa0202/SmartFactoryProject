@@ -49,7 +49,7 @@
   <div class="container">
     <ol class="breadcrumb">
       <li>
-        <a href="index.html">Home</a>
+        <a href="index.jsp">Home</a>
       </li>
       <li class="active">Contact</li>
     </ol>

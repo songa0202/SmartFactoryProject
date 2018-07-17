@@ -33,14 +33,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
     <!--top menu-->
- <jsp:include page="/menu/top.jsp" flush='false' />
+ <jsp:include page="../menu/top.jsp" flush='false' />
 
   <!--content-->
   <div class="login_sec">
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.jsp">Home</a>
         </li>
         <li class="active">Login</li>
       </ol>
@@ -50,13 +50,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>If you have previously Login with us,
           <span>click here</span>
         </p>
-        <form>
-          <h5>User Name</h5>
-          <input type="text" value="">
+        <form name='login_form' method='POST' action='./Controller?reqName=login'>
+          <h5>User id</h5>
+          <input type="id"  name="id" value="">
           <h5>Password</h5>
-          <input type="password" value="">
-          <input type="submit" value="Login">
-          <a class="acount-btn" href="account.html">Create an Account</a>
+          <input type="passwd" name="passwd" value="">
+          <input type="hidden" name="reqName" value="login">
+          <a class="acount-btn" href="account.jsp">Create an Account</a>
         </form>
         <a href="#">Forgot Password ?</a>
       </div>
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   
  <!--footer-->
-  <jsp:include page="/menu/footer.jsp" flush='false' />
+  <jsp:include page="../menu/footer.jsp" flush='false' />
   
 </body>
 

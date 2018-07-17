@@ -109,7 +109,7 @@
 						<div class="ofr-pic-info">
 							<h4>나에게 맞는 조명 추천 받기</h4>
 							<span>Recommend your lights.</span>
-							<a href="recommend.html" style="color: white;"><p>Go</p></a>
+							<a href="recommend.jsp" style="color: white;"><p>Go</p></a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -121,7 +121,7 @@
 						<div class="ofr-pic-info2">
 							<h4>내가 원하는 조명 만들기</h4>
 							<span>Customizing Your lights now.</span>
-							<a href="customizing.html" style="color: white;"><p>Go</p></a>
+							<a href="customizing.jsp" style="color: white;"><p>Go</p></a>
 						</div>
 						<div class="ofr-pic">
 							<img src="images/ofr3.jpg" class="img-responsive" alt=""> 
