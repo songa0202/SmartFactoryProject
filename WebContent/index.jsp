@@ -104,7 +104,7 @@
 				<div class="col-md-6 grid-left">
 					<div class="offer-grid1">
 						<div class="ofr-pic">
-							<img src="images/ofr2.jpeg" class="img-responsive" alt=""> 
+							<img src="images/전조등1.jpg" style="height:150px;" class="img-responsive" alt=""> 
 						</div>
 						<div class="ofr-pic-info">
 							<h4>나에게 맞는 조명 추천 받기</h4>
@@ -124,7 +124,7 @@
 							<a href="customizing.jsp" style="color: white;"><p>Go</p></a>
 						</div>
 						<div class="ofr-pic">
-							<img src="images/ofr3.jpg" class="img-responsive" alt=""> 
+							<img src="images/전조등2.jpg" style="height:150px;" class="img-responsive" alt=""> 
 						</div>
 
 						<div class="clearfix"></div>

@@ -4,7 +4,7 @@
   
   <resource-ref>
   <description>HANADB Resource</description><!-- 리소스 설명 -->
-  <res-ref-name>jdbc/SAPABAP1</res-ref-name><!-- 리소스 이름(JNDI명) -->
+  <res-ref-name>jdbc/SMARTF_01</res-ref-name><!-- 리소스 이름(JNDI명) -->
   <res-type>javax.sql.DataSource</res-type><!-- 리턴 Type -->
   <res-auth>Container</res-auth><!-- 관리 계층 -->
 </resource-ref>

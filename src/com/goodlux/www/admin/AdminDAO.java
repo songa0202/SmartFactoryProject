@@ -35,7 +35,7 @@ public class AdminDAO {
       sql = new StringBuffer();
       sql.append(" SELECT COUNT(*) as cnt ");
       sql.append(" FROM ZSM01_MEMBERSHIP ");
-      sql.append(" WHERE email=? AND passwd=?");
+      sql.append(" WHERE MEM_ID=? AND MEM_PW=?");
       
       pstmt = con.prepareStatement(sql.toString());
       pstmt.setString(1, id);
@@ -58,27 +58,65 @@ public class AdminDAO {
     return result;
   }
 
-  public Boolean signUp(HttpServletRequest req) {
-    Boolean result=false; 
-    AdminDTO dto = new AdminDTO();
-    String mem_id = req.getParameter("id"); //회원 ID
-    String mem_pw = req.getParameter("passwd"); //회원 PW
-    String carty = req.getParameter("carType"); //차종
-    int age = Integer.parseInt(req.getParameter("age")); //나이
-    String postno = req.getParameter("postNo"); // 우편번호
-    String addre = req.getParameter("address"); //주소
-    String mem_name = req.getParameter("name"); //이름
-    String tel = req.getParameter("tel");; //전화번호
-    String email = req.getParameter("email"); //이메일
-   
-    int mandt; //클라이언트번호
-    String erdat; //최초생성일
-    String ernam; //최초생성자
-    String erzet; //entry time
-    String aedat; //최근수정일
-    String aenam; //최근수정자
-    String aezet; //마지막변경시간 
+  public Boolean createUser(AdminDTO adminDTO) {
+    //리턴값
+    Boolean result=false;  
+    int count = 0;
     
+    try {
+      
+      con = dbopen.getConnection();
+      sql = new StringBuffer();
+      sql.append(" INSERT INTO ZSM01_MEMBERSHIP("
+          + "MEM_ID,"
+          + "MEM_PW,"
+          + "CARTY,"
+          + "AGE,"
+          + "POSTNO,"
+          + "ADDRE,"
+          + "MEM_NAME,"
+          + "TEL,"
+          + "EMAIL"
+          + "MANDT, "
+          + "ERDAT, "
+          + "ERNAM, "
+          + "ERZET, "
+          + "AEDAT, "
+          + "AENAM, "
+          + "AEZET)");
+      sql.append(" VALUES(?,?,?,?,?,?,?,?,?,"
+          + "'800',"
+          + "CURRENT_DATE,"
+          + "?,"
+          + "CURRENT_TIME,"
+          + "CURRENT_DATE,"
+          + "?,"
+          + "CURRENT_TIME )");
+      
+      pstmt = con.prepareStatement(sql.toString());
+      
+      pstmt.setString(1, adminDTO.getMem_id()); 
+      pstmt.setString(2, adminDTO.getMem_pw());
+      pstmt.setString(3, adminDTO.getCarty()); 
+      pstmt.setInt(4, adminDTO.getAge()); 
+      pstmt.setString(5, adminDTO.getPostno());
+      pstmt.setString(6, adminDTO.getAddre());
+      pstmt.setString(7, adminDTO.getMem_name());
+      pstmt.setString(8, adminDTO.getTel());
+      pstmt.setString(9, adminDTO.getEmail());
+      pstmt.setString(10, adminDTO.getErnam());
+      pstmt.setString(11, adminDTO.getAenam());
+      
+      count = pstmt.executeUpdate();
+      if(count !=0){
+        return true;
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }finally{
+      dbclose.close(con, pstmt);
+    }
+
     return result;
      
   }

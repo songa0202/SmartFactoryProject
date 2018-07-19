@@ -27,7 +27,7 @@
     -->
     
      <!-- 이게 뭔진 모르겠어오 -->
-    <ResourceLink global="jdbc/SAPABAP1" name="jdbc/SAPABAP1" type="javax.sql.DataSource"/>
+    <ResourceLink global="jdbc/SMARTF_01" name="jdbc/SMARTF_01" type="javax.sql.DataSource"/>
 
     
 

@@ -97,7 +97,7 @@
         </script>
         <div class="registration_form">
           <!-- Form -->
-          <form name='registration_form' method='POST' action='./Controller'>
+          <form name='registration_form' method='POST' action='/SmartFactoryProject1/Controller'>
             <!-- 이름 -->
             <div>
               <label>

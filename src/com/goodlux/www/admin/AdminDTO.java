@@ -11,16 +11,38 @@ public class AdminDTO {
   private String tel; //전화번호
   private String email; //이메일
  
-  private int mandt; //클라이언트번호
+  private String mandt; //클라이언트번호
   private String erdat; //최초생성일
   private String ernam; //최초생성자
   private String erzet; //entry time
   private String aedat; //최근수정일
   private String aenam; //최근수정자
   private String aezet; //마지막변경시간
-  private String getMem_id() {
+  
+  public AdminDTO() {
+    super();
+  }
+
+  public AdminDTO(String mem_id, String mem_pw, String carty, int age, String postno, String addre, String mem_name,
+      String tel, String email, String ernam, String aenam) {
+    super();
+    this.mem_id = mem_id;
+    this.mem_pw = mem_pw;
+    this.carty = carty;
+    this.age = age;
+    this.postno = postno;
+    this.addre = addre;
+    this.mem_name = mem_name;
+    this.tel = tel;
+    this.email = email;
+    this.ernam = ernam;
+    this.aenam = aenam;
+  }
+  
+  public String getMem_id() {
     return mem_id;
   }
+  
   public void setMem_id(String mem_id) {
     this.mem_id = mem_id;
   }
@@ -72,10 +94,10 @@ public class AdminDTO {
   public void setEmail(String email) {
     this.email = email;
   }
-  public int getMandt() {
+  public String getMandt() {
     return mandt;
   }
-  public void setMandt(int mandt) {
+  public void setMandt(String mandt) {
     this.mandt = mandt;
   }
   public String getErdat() {

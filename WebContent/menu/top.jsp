@@ -1,3 +1,6 @@
+<%@ page contentType="text.jsp; charset=UTF-8"%>
+<%@ page import="java.util.ArrayList"%>  
+  
   <!--top menu-->
 
   <!--LOGO-->
@@ -5,7 +8,7 @@
     <div class="header-bottom">
       <div class="logo">
         <h1>
-          <a href="index.html">GoodLux</a>
+          <a href="index.jsp">GoodLux</a>
         </h1>
       </div>
 
@@ -13,10 +16,10 @@
       <div class="top-nav">
         <ul class="memenu skyblue">
           <li class="active">
-            <a href="index.html">Home</a>
+            <a href="index.jsp">Home</a>
           </li>
           <li class="grid">
-            <a href="who.html">who</a>
+            <a href="who.jsp">who</a>
           </li>
           <li class="grid">
             <a href="#">Products</a>
@@ -26,28 +29,28 @@
                   <h4>Shop</h4>
                   <ul>
                     <li>
-                      <a href="product.html">New Arrivals</a>
+                      <a href="product.jsp">New Arrivals</a>
                     </li>
                     <li>
-                      <a href="product.html">Home</a>
+                      <a href="product.jsp">Home</a>
                     </li>
                     <li>
-                      <a href="product.html">Decorates</a>
+                      <a href="product.jsp">Decorates</a>
                     </li>
                     <li>
-                      <a href="product.html">Accessories</a>
+                      <a href="product.jsp">Accessories</a>
                     </li>
                     <li>
-                      <a href="product.html">Kids</a>
+                      <a href="product.jsp">Kids</a>
                     </li>
                     <li>
-                      <a href="product.html">Login</a>
+                      <a href="product.jsp">Login</a>
                     </li>
                     <li>
-                      <a href="product.html">Brands</a>
+                      <a href="product.jsp">Brands</a>
                     </li>
                     <li>
-                      <a href="product.html">My Shopping Bag</a>
+                      <a href="product.jsp">My Shopping Bag</a>
                     </li>
                   </ul>
                 </div>
@@ -55,22 +58,22 @@
                   <h4>Type</h4>
                   <ul>
                     <li>
-                      <a href="product.html">Diwali Lights</a>
+                      <a href="product.jsp">Diwali Lights</a>
                     </li>
                     <li>
-                      <a href="product.html">Tube Lights</a>
+                      <a href="product.jsp">Tube Lights</a>
                     </li>
                     <li>
-                      <a href="product.html">Bulbs</a>
+                      <a href="product.jsp">Bulbs</a>
                     </li>
                     <li>
-                      <a href="product.html">Ceiling Lights</a>
+                      <a href="product.jsp">Ceiling Lights</a>
                     </li>
                     <li>
-                      <a href="product.html">Accessories</a>
+                      <a href="product.jsp">Accessories</a>
                     </li>
                     <li>
-                      <a href="product.html">Lanterns</a>
+                      <a href="product.jsp">Lanterns</a>
                     </li>
                   </ul>
                 </div>
@@ -78,28 +81,28 @@
                   <h4>Popular Brands</h4>
                   <ul>
                     <li>
-                      <a href="product.html">Everyday</a>
+                      <a href="product.jsp">Everyday</a>
                     </li>
                     <li>
-                      <a href="product.html">Philips</a>
+                      <a href="product.jsp">Philips</a>
                     </li>
                     <li>
-                      <a href="product.html">Havells</a>
+                      <a href="product.jsp">Havells</a>
                     </li>
                     <li>
-                      <a href="product.html">Wipro</a>
+                      <a href="product.jsp">Wipro</a>
                     </li>
                     <li>
-                      <a href="product.html">Jaguar</a>
+                      <a href="product.jsp">Jaguar</a>
                     </li>
                     <li>
-                      <a href="product.html">Ave</a>
+                      <a href="product.jsp">Ave</a>
                     </li>
                     <li>
-                      <a href="product.html">Gold Medal</a>
+                      <a href="product.jsp">Gold Medal</a>
                     </li>
                     <li>
-                      <a href="product.html">Anchor</a>
+                      <a href="product.jsp">Anchor</a>
                     </li>
                   </ul>
                 </div>
@@ -108,7 +111,7 @@
           </li>
 
           <li class="grid">
-            <a href="contact.html">Contact</a>
+            <a href="contact.jsp">Contact</a>
           </li>
         </ul>
       </div>
@@ -116,7 +119,21 @@
       <!--LOGIN-->
       <div class="cart box_1">
         <li class="grid">
-          <a href="Login.html">Login</a>
+          <%
+            if(session.getAttribute("id")!=null){
+              
+%>
+            
+             
+            <a href="#"><%= session.getAttribute("userId") %></a> 님 반갑습니다. 
+            <button onclick="location.href='logout.jsp'">로그아웃</button>
+<%        }else{
+%>
+            <a href="Login.jsp">Login</a>
+<%
+            }
+            %>
+          
         </li>
       </div>
       <div class="clearfix"> </div>
