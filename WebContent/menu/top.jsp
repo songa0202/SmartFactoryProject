@@ -1,5 +1,9 @@
 <%@ page contentType="text.jsp; charset=UTF-8"%>
 <%@ page import="java.util.ArrayList"%>  
+<%
+  String root = request.getContextPath();
+  // out.println("root: " + root);
+%>
   
   <!--top menu-->
 
@@ -8,7 +12,7 @@
     <div class="header-bottom">
       <div class="logo">
         <h1>
-          <a href="index.jsp">GoodLux</a>
+          <a href="<%=root%>/index.jsp">GoodLux</a>
         </h1>
       </div>
 
@@ -16,10 +20,10 @@
       <div class="top-nav">
         <ul class="memenu skyblue">
           <li class="active">
-            <a href="index.jsp">Home</a>
+            <a href="<%=root%>/index.jsp">Home</a>
           </li>
           <li class="grid">
-            <a href="who.jsp">who</a>
+            <a href="<%=root%>/who.jsp">who</a>
           </li>
           <li class="grid">
             <a href="#">Products</a>
@@ -29,28 +33,28 @@
                   <h4>Shop</h4>
                   <ul>
                     <li>
-                      <a href="product.jsp">New Arrivals</a>
+                      <a href="<%=root%>/product.jsp">New Arrivals</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Home</a>
+                      <a href="<%=root%>/product.jsp">Home</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Decorates</a>
+                      <a href="<%=root%>/product.jsp">Decorates</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Accessories</a>
+                      <a href="<%=root%>/product.jsp">Accessories</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Kids</a>
+                      <a href="<%=root%>/product.jsp">Kids</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Login</a>
+                      <a href="<%=root%>/product.jsp">Login</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Brands</a>
+                      <a href="<%=root%>/product.jsp">Brands</a>
                     </li>
                     <li>
-                      <a href="product.jsp">My Shopping Bag</a>
+                      <a href="<%=root%>/product.jsp">My Shopping Bag</a>
                     </li>
                   </ul>
                 </div>
@@ -58,22 +62,22 @@
                   <h4>Type</h4>
                   <ul>
                     <li>
-                      <a href="product.jsp">Diwali Lights</a>
+                      <a href="<%=root%>/product.jsp">Diwali Lights</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Tube Lights</a>
+                      <a href="<%=root%>/product.jsp">Tube Lights</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Bulbs</a>
+                      <a href="<%=root%>/product.jsp">Bulbs</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Ceiling Lights</a>
+                      <a href="<%=root%>/product.jsp">Ceiling Lights</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Accessories</a>
+                      <a href="<%=root%>/product.jsp">Accessories</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Lanterns</a>
+                      <a href="<%=root%>/product.jsp">Lanterns</a>
                     </li>
                   </ul>
                 </div>
@@ -81,28 +85,28 @@
                   <h4>Popular Brands</h4>
                   <ul>
                     <li>
-                      <a href="product.jsp">Everyday</a>
+                      <a href="<%=root%>/product.jsp">Everyday</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Philips</a>
+                      <a href="<%=root%>/product.jsp">Philips</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Havells</a>
+                      <a href="<%=root%>/product.jsp">Havells</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Wipro</a>
+                      <a href="<%=root%>/product.jsp">Wipro</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Jaguar</a>
+                      <a href="<%=root%>/product.jsp">Jaguar</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Ave</a>
+                      <a href="<%=root%>/product.jsp">Ave</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Gold Medal</a>
+                      <a href="<%=root%>/product.jsp">Gold Medal</a>
                     </li>
                     <li>
-                      <a href="product.jsp">Anchor</a>
+                      <a href="<%=root%>/product.jsp">Anchor</a>
                     </li>
                   </ul>
                 </div>
@@ -111,7 +115,7 @@
           </li>
 
           <li class="grid">
-            <a href="contact.jsp">Contact</a>
+            <a href="<%=root%>/contact.jsp">Contact</a>
           </li>
         </ul>
       </div>
@@ -126,10 +130,10 @@
             
              
             <a href="#"><%= session.getAttribute("userId") %></a> 님 반갑습니다. 
-            <button onclick="location.href='logout.jsp'">로그아웃</button>
+            <button onclick="location.href='<%=root%>/logout.jsp'">로그아웃</button>
 <%        }else{
 %>
-            <a href="Login.jsp">Login</a>
+            <a href="<%=root%>/login/login.jsp">Login</a>
 <%
             }
             %>
